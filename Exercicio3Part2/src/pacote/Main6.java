@@ -20,7 +20,7 @@ public class Main6 {
 			double altura = sc.nextDouble();
 			
 			PessoaMain6 p1 = new PessoaMain6(nome,peso,altura);
-			asdasd
+		
 		}
 		
 	}

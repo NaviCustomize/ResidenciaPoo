@@ -1,32 +1,47 @@
 package pacote;
 
-public class ContaCorrente implements Conta {
-
+public class ContaCorrente implements Conta 
+{
     private String titular;
-    private Double saldo;
+    private double saldo;
 
-    public ContaCorrente(String titular, Double saldo) {
+    public ContaCorrente(String titular, double saldo) 
+    {
         this.titular = titular;
         this.saldo = saldo;
     }
 
-    @Override
-    public String toString() {
-        return "titular: " + titular + ", saldo: " + saldo;
-    }
-
-    public String getTitular() {
+    public String getTitular() 
+    {
         return titular;
     }
 
-    public Double getSaldo() {
+    public double getSaldo() 
+    {
         return saldo;
     }
 
     @Override
-    public void saque(double valor) {
-        if (saldo >= valor + taxaSaque) {
-            saldo -= (valor + taxaSaque);
+    public String toString() 
+    {
+        return "Conta Corrente: [Titular: " + titular + ", Saldo: " + saldo + "]";
+    }
+
+    @Override
+    public void saque (double valor)
+    {
+        if (saldo > valor)
+        {
+            saldo -= valor;
+        }
+    }
+
+    @Override
+    public void deposito (double valor)
+    {
+        if (valor > 0)
+        {
+            saldo += valor;
         }
     }
 }

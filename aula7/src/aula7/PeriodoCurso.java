@@ -26,6 +26,4 @@ public enum PeriodoCurso {
 		return valor;
 	}
 	
-	
-	
 }
